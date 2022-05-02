@@ -1,0 +1,7 @@
+{
+  "name": "predialx-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Walefe de Jesus <walefedev@gmail.com>",
+  "license": "MIT"
+}
