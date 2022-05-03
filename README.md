@@ -1,3 +1,5 @@
+hey, use this file json to test the api in insomnia. [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=predialx&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fwalefe%2Fpredialx-api%2Fmain%2FInsomnia_2022-05-03.json)
+
 # predialx-api
   - This is a API for prediax an application for create customers, clients and orders :smile:
 
