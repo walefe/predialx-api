@@ -8,10 +8,36 @@ datasource db {
 }
 
 model Customer {
-  id String @id @default(uuid())
-  name String
+  id        String   @id @default(uuid())
+  name      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Order     Order[]
 
   @@map("customer")
+}
+
+model Collaborator {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Order Order[]
+
+  @@map("collaborator")
+}
+
+model Order {
+  id              String       @id @default(uuid())
+  description     String
+  customer_id     String
+  customer        Customer     @relation(fields: [customer_id], references: [id])
+  collaborator    Collaborator @relation(fields: [collaborator_id], references: [id])
+  collaborator_id String
+  createdAt DateTime @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@map("order")
 }
